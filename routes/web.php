@@ -43,17 +43,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('index.home');
-Route::post('/store-suggestion', [HomeController::class, 'storeSuggest'])->name('store.suggestion');
+// Route::post('/store-suggestion', [HomeController::class, 'storeSuggest'])->name('store.suggestion');
 
-Route::prefix('front-store')->group(function () {
-    Route::get('/index', [FrontendStoreController::class, 'index'])->name('front.store.index');
-    Route::get('/show/{id}', [FrontendStoreController::class, 'show'])->name('front.store.show');
-});
+// Route::prefix('front-store')->group(function () {
+//     Route::get('/index', [FrontendStoreController::class, 'index'])->name('front.store.index');
+//     Route::get('/show/{id}', [FrontendStoreController::class, 'show'])->name('front.store.show');
+// });
 
-Route::prefix('front-event')->group(function () {
-    Route::get('/index', [FrontendEventController::class, 'index'])->name('front.event.index');
-    Route::get('/show/{id}', [FrontendEventController::class, 'show'])->name('front.event.show');
-});
+// Route::prefix('front-event')->group(function () {
+//     Route::get('/index', [FrontendEventController::class, 'index'])->name('front.event.index');
+//     Route::get('/show/{id}', [FrontendEventController::class, 'show'])->name('front.event.show');
+// });
 
 
 // Route::get('/', function () {
@@ -84,16 +84,6 @@ Route::middleware(['auth', 'role:Admin'])->group(function () {
         Route::get('/destroy/{id}', [MediaController::class, 'destroy'])->name('media.destroy');
     });
 
-
-    Route::prefix('store')->group(function () {
-        Route::get('/show', [StoreController::class, 'index'])->name('store.show');
-        Route::get('/create', [StoreController::class, 'create'])->name('store.create');
-        Route::post('/store', [StoreController::class, 'store'])->name('store.store');
-        Route::get('/edit/{id}', [StoreController::class, 'edit'])->name('store.edit');
-        Route::post('/update/{id}', [StoreController::class, 'update'])->name('store.update');
-        Route::get('/destroy/{id}', [StoreController::class, 'destroy'])->name('store.destroy');
-    });
-
     Route::prefix('product')->group(function () {
         Route::get('/show', [ProductController::class, 'index'])->name('product.show');
         Route::get('/create', [ProductController::class, 'create'])->name('product.create');
@@ -110,24 +100,6 @@ Route::middleware(['auth', 'role:Admin'])->group(function () {
         Route::get('/edit/{id}', [NewsController::class, 'edit'])->name('news.edit');
         Route::post('/update/{id}', [NewsController::class, 'update'])->name('news.update');
         Route::get('/destroy/{id}', [NewsController::class, 'destroy'])->name('news.destroy');
-    });
-
-    Route::prefix('event')->group(function () {
-        Route::get('/show', [EventController::class, 'index'])->name('event.show');
-        Route::get('/create', [EventController::class, 'create'])->name('event.create');
-        Route::post('/store', [EventController::class, 'store'])->name('event.store');
-        Route::get('/edit/{id}', [EventController::class, 'edit'])->name('event.edit');
-        Route::post('/update/{id}', [EventController::class, 'update'])->name('event.update');
-        Route::get('/destroy/{id}', [EventController::class, 'destroy'])->name('event.destroy');
-    });
-
-    Route::prefix('suggestion')->group(function () {
-        Route::get('/show', [SuggestController::class, 'index'])->name('suggestion.show');
-        // Route::get('/create', [SuggestController::class, 'create'])->name('suggestion.create');
-        // Route::post('/store', [SuggestController::class, 'store'])->name('suggestion.store');
-        // Route::get('/edit/{id}', [SuggestController::class, 'edit'])->name('suggestion.edit');
-        // Route::post('/update/{id}', [SuggestController::class, 'update'])->name('suggestion.update');
-        // Route::get('/destroy/{id}', [SuggestController::class, 'destroy'])->name('suggestion.destroy');
     });
 
     Route::prefix('user')->group(function () {

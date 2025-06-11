@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Home | Basko Grand Mall')
+@section('title', 'Home | Orcas')
 
 @section('content')
 <style>

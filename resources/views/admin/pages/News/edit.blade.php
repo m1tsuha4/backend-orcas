@@ -1,6 +1,6 @@
 @extends('admin.app')
 
-@section('title', 'Admin | Basko Grand Mall')
+@section('title', 'Admin | Orcas')
 
 @section('content')
     <div class="container-fluid py-4">
@@ -37,19 +37,19 @@
                                         </div>
                                     </div>
                                    <div class="col col-6">
-                                        <x-admin.input type="datetime-local" placeholder="Published Date" label="Published Date" name="publish_date" />
+                                        <x-admin.input type="datetime-local" placeholder="Published Date" label="Published Date" value="{{ $edit->publish_date ?? '' }}" name="publish_date" />
                                     </div
                                     <div class="col col-12">
-                                        <x-admin.input type="text" placeholder="Author" label="Author" name="author" />
+                                        <x-admin.input type="text" placeholder="Author" label="Author" value="{{ $edit->author ?? '' }}" name="author" />
                                     </div>
                                     <div class="col col-12">
                                         <label>Deskripsi</label>
                                         <textarea class="form-control mb-3" name="desc" cols="10" rows="5" id="deskripsi">{{ $edit->desc ?? '' }}</textarea>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="d-flex justify-content-end mt-3">
-                                <button type="submit" class="btn btn-sm btn-success">Ubah</button>
+                                <div class="d-flex justify-content-end mt-3">
+                                    <button type="submit" class="btn btn-sm btn-success">Ubah</button>
+                                </div>
                             </div>
                         </form>
                     </div>

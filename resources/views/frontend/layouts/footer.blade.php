@@ -58,7 +58,7 @@
 
     <div class="container copyright text-center mt-4">
     <p>
-        ©<strong class="px-1 sitename">Basko Grand Mall</strong>
+        ©<strong class="px-1 sitename">Orcas</strong>
         <span>- All Rights Reserved</span>
     </p>
     </div>

@@ -1,12 +1,12 @@
 @extends('admin.app')
 
-@section('title', 'Admin | Basko Grand Mall')
+@section('title', 'Admin | Orcas')
 
 @section('content')
     <div class="container-fluid py-4">
         <div class="row">
             <div class="col-12">
-                <h6>Store</h6>
+                <h6>News</h6>
                 <div class="card mb-4">
                     <div class="card-header pb-0 d-flex justify-content-end">
                         <a href="{{ route('news.create') }}" class="btn bg-gradient-success"><i

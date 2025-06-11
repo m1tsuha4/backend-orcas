@@ -1,6 +1,6 @@
 @extends('admin.app')
 
-@section('title', 'Admin | Basko Grand Mall')
+@section('title', 'Admin | Orcas')
 
 @section('content')
     <div class="row">
@@ -32,9 +32,9 @@
                     <div class="row">
                         <div class="col-8">
                             <div class="numbers">
-                                <p class="text-sm mb-0 text-capitalize font-weight-bold">Store</p>
+                                <p class="text-sm mb-0 text-capitalize font-weight-bold">Category</p>
                                 <h5 class="font-weight-bolder mb-0">
-                                    {{ $storeTotal ?? '0' }}
+                                    {{ $categoryTotal ?? '0' }}
                                     {{-- {{ $userTotal ?? '0' }} --}}
                                 </h5>
                             </div>
@@ -54,9 +54,9 @@
                     <div class="row">
                         <div class="col-8">
                             <div class="numbers">
-                                <p class="text-sm mb-0 text-capitalize font-weight-bold">Event</p>
+                                <p class="text-sm mb-0 text-capitalize font-weight-bold">Product</p>
                                 <h5 class="font-weight-bolder mb-0">
-                                    {{ $eventTotal ?? '0' }}
+                                    {{ $productTotal ?? '0' }}
                                     {{-- {{ $customerTotal ?? '0' }} --}}
                                 </h5>
                             </div>
@@ -76,9 +76,9 @@
                     <div class="row">
                         <div class="col-8">
                             <div class="numbers">
-                                <p class="text-sm mb-0 text-capitalize font-weight-bold">Saran</p>
+                                <p class="text-sm mb-0 text-capitalize font-weight-bold">News</p>
                                 <h5 class="font-weight-bolder mb-0">
-                                    {{ $suggestTotal ?? '0' }}
+                                    {{ $newsTotal ?? '0' }}
                                     {{-- {{ $barangTotal ?? '0' }} --}}
                                 </h5>
                             </div>

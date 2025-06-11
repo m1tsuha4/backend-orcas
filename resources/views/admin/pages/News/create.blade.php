@@ -1,6 +1,6 @@
 @extends('admin.app')
 
-@section('title', 'Admin | Basko Grand Mall')
+@section('title', 'Admin | Orcas')
 
 @section('content')
     <div class="container-fluid py-4">
@@ -34,9 +34,9 @@
                                         <textarea class="form-control mb-3" name="desc" cols="10" rows="5" id="deskripsi"></textarea>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="d-flex justify-content-end mt-3">
-                                <button type="submit" class="btn btn-sm btn-success">Tambah</button>
+                                 <div class="d-flex justify-content-end mt-3">
+                                    <button type="submit" class="btn btn-sm btn-success">Tambah</button>
+                                </div>
                             </div>
                         </form>
                     </div>

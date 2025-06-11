@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Store | Basko Grand Mall')
+@section('title', 'Store | Orcas')
 
 @section('content')
     <main class="main">

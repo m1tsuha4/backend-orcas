@@ -1,6 +1,6 @@
 @extends('admin.app')
 
-@section('title', 'Admin | Basko Grand Mall')
+@section('title', 'Admin | Orcas')
 
 @section('content')
     <div class="container-fluid py-4">
