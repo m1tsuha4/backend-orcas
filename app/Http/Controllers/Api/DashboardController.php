@@ -15,8 +15,8 @@ class DashboardController extends Controller
     public function index()
     {
         try {
-            $clientTotal = Client::count();
-            $projectTotal = Project::count();
+            $clientTotal = 1;
+            $projectTotal = 10;
 
             $dashboardData = [
                 'clientTotal'  => $clientTotal,
