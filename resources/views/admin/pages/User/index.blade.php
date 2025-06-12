@@ -19,7 +19,6 @@
                                     <tr>
                                         <x-admin.th>No</x-admin.th>
                                         <x-admin.th>Nama</x-admin.th>
-                                        <x-admin.th>Jenis Kelamin</x-admin.th>
                                         <x-admin.th>Email</x-admin.th>
                                         <x-admin.th>Role</x-admin.th>
                                         <x-admin.th>Action</x-admin.th>
@@ -30,7 +29,6 @@
                                     <tr>
                                         <x-admin.td class="text-center">{{ $loop->iteration }}</x-admin.td>
                                         <x-admin.td class="text-center">{{ $item->name ?? '-' }}</x-admin.td>
-                                        <x-admin.td class="text-center">{{ $item->gender ?? '-' }}</x-admin.td>
                                         <x-admin.td class="text-center">{{ $item->email ?? '-' }}</x-admin.td>
                                         <x-admin.td class="text-center">{{ $item->role ?? '-' }}</x-admin.td>
                                         <x-admin.td class="text-center">
@@ -61,15 +59,6 @@
                                                         <div class="modal-body">
                                                             <x-admin.input type="text" placeholder="Name" label="Name"
                                                                 name="name" value="{{ $item->name ?? '' }}" />
-                                                            <Label>Gender</Label>
-                                                            <select class="form-select mb-3"
-                                                                aria-label="Default select example" name="gender">
-                                                                <option hidden>--- Choose Gender ---</option>
-                                                                <option value="Pria" @selected($item->gender == 'Pria')>Pria
-                                                                </option>
-                                                                <option value="Wanita" @selected($item->gender == 'Wanita')>Wanita
-                                                                </option>
-                                                            </select>
 
                                                             <x-admin.input type="email" placeholder="Email" label="Email"
                                                                 name="email" value="{{ $item->email ?? '' }}" />
@@ -138,12 +127,6 @@
                         <x-admin.input type="email" placeholder="Email" label="Email" name="email" />
                         <x-admin.input type="text" placeholder="Nama" label="Nama" name="name" />
 
-                        <Label>Jenis Kelamin</Label>
-                        <select class="form-select mb-3" aria-label="Default select example" name="gender">
-                            <option hidden>--- Pilih ---</option>
-                            <option value="Pria">Pria</option>
-                            <option value="Wanita">Wanita</option>
-                        </select>
                         <x-admin.input type="password" placeholder="********" label="Password" name="password" />
                     </div>
                     <div class="modal-footer">
